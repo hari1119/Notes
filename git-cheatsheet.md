@@ -46,4 +46,5 @@
 | `git remote show origin` | Shows information such as the URL of the remote repository, the branches present on the remote, and the local branches that are configured to track branches on the remote. | `git remote show origin` |
 | `git push origin --delete <branch_name>` | The --delete option indicates that you want to delete the specified branch on the remote. | `git push origin --delete feature-branch` |
 | `git ls-remote <remote>` | Displays a list of commit hashes and their corresponding references (branches, tags, etc.). | `git ls-remote origin` |
+| `git reset --hard HEAD^` | Reset the last pull | |
 
