@@ -1,6 +1,6 @@
 | Command | Explanation | Use Case |
 |---|---|---|
-| **`docker build`** | Builds an image from a Dockerfile. | Building a custom Docker image for a web server. |
+| **`docker build`** | **`docker build -t image_name .`** Builds an image from a Dockerfile. | Building a custom Docker image for a web server. |
 | **`docker pull`** | Pulls an image or a repository from a registry. | Pulling the latest version of a database image from Docker Hub. |
 | **`docker push`** | Pushes an image or a repository to a registry. | Pushing a customized Docker image to a private registry. |
 | **`docker run`** | Runs a command in a new container. | Running a containerized application for testing. |
