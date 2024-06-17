@@ -32,10 +32,15 @@ python3.6 -m venv env_name
 
 > Make sure you activated the Python env before starting to install python dependence
 
-- Download a [requirements.txt]() 
+- Download a [requirements.txt](https://github.com/hari1119/Notes/blob/main/files/requirements.txt) 
 
 ```python3 -m pip install -r requirements.txt ```
 
+Or
+
+unzip the zip file and active the env and use
+
+Download here : [Zip file]()
 
 
 
