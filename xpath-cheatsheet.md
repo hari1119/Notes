@@ -51,3 +51,36 @@ Selectors are used inside the expression to target the right element.
 |**before** | Adds the XPath content before the targeted node. |
 |**after** | Adds the XPath content after the targeted node. |
 |**attributes** | Adds the XPath content inside an attribute. |
+
+# Examples
+
+### replace
+```
+<xpath expr="//*[hasclass('breadcrumb')]" position="replace"/>
+```
+### inside
+```
+<xpath expr="//ul" position="inside">
+   <li>Last element of the list</li>
+</xpath>
+```
+
+### before 
+```
+<xpath expr="//header/nav" position="before">
+   <div>Some content before the header</div>
+</xpath>
+```
+### attributes
+```
+<xpath expr="//header" position="attributes">
+   <attribute name="class" add="x_airproof_header" separator=" "/>
+</xpath>
+```
+```
+<xpath expr="//header" position="attributes">
+   <attribute name="class" remove="x_airproof_header" />
+</xpath>
+```
+
+### For more -> [Cick Here!](https://devhints.io/xpath)
