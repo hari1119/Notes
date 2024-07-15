@@ -1,5 +1,7 @@
 # Node.js
 
+TC39 ->  [JS Cummunity](https://tc39.es/)
+
 AOM vs BOM vs DOM
 
 ### AOM
@@ -19,3 +21,5 @@ The Document Object Model (DOM) is a programming interface that represents the s
 - [JS Life Cycel](https://javascript.info/onload-ondomcontentloaded)
 - [JS Events](https://javascript.info/introduction-browser-events)
 - 
+
+While creating the JS project using the npm command, if we want to use the project as a module while we wanna to mention that ``` "type" : "module" ```
