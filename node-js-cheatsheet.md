@@ -20,8 +20,11 @@ The Document Object Model (DOM) is a programming interface that represents the s
 - [Web Technology Mozilla Docs.](https://developer.mozilla.org/en-US/docs/Web/API)
 - [JS Life Cycel](https://javascript.info/onload-ondomcontentloaded)
 - [JS Events](https://javascript.info/introduction-browser-events)
-- 
+
 
 While creating the JS project using the npm command, if we want to use the project as a module while we wanna to mention that ``` "type" : "module" ```
 
 For this if we use the ```bun init``` to create the project means we don't need to mention that, because while executing the command it automatically added the type in the package.json.
+
+
+- [JS Online Playground](https://stackblitz.com/)
