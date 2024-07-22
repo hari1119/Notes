@@ -28,3 +28,10 @@ For this if we use the ```bun init``` to create the project means we don't need 
 
 
 - [JS Online Playground](https://stackblitz.com/)
+
+
+## synchronous vs asynchronous
+
+- [synchronous-vs-asynchronous](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)
+
+
