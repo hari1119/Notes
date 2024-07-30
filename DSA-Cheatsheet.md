@@ -4,7 +4,7 @@
 
  - Data structure is the arranging,processing, retrieving, and storing the data in a computer memory with well defined way by the experts based on the need.
 
-![image](https://github.com/user-attachments/assets/b2434562-da34-4d8c-b444-fbd4f9bcad0c)
+![image](https://github.com/user-attachments/assets/2b82b1b3-0fa1-473a-87b1-f15fe1bb0af8)
 
 
 ### Linear Data Structure
@@ -15,6 +15,9 @@
  - Static Data structure have fixed memoery size, easier to access the element.
  - **EX**. Array
      - **Array**
+
+          ![image](https://github.com/user-attachments/assets/cf998776-6e9a-47e7-b155-7eedd1b673ed)
+
 
         ```
         # Python
