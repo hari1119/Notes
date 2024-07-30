@@ -138,7 +138,9 @@
          print(squared_list)  # Output: [100, 400, 900, 1600, 2500]
 
          ```
-       
+
+      - Advanced array, we can use the Numpy arrays in python.
+        
  #### Dynamic Data Structure
  - In the dynamic data structure the size is not fixed, It can be randomly updated during the runtime.
  - **EX**. queue, stack, Linked list, etc
