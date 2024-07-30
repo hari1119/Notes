@@ -139,6 +139,24 @@
 
          ```
 
+         ```
+         from functools import reduce
+
+         numbers = [1, 2, 3, 4, 5]
+
+         # Map
+         doubled = list(map(lambda x: x * 2, numbers))
+         print(doubled)
+
+         # Filter
+         even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+         print(even_numbers)
+
+         # Reduce
+         product = reduce(lambda x, y: x * y, numbers)
+         print(product)
+         ```
+
       - Advanced array, we can use the Numpy arrays in python.
         
  #### Dynamic Data Structure
