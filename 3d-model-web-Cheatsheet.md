@@ -4,6 +4,7 @@ With the help of ```<model-viewer>``` we can able to display the 3D model in the
 
 - [model-viewer official site](https://modelviewer.dev/)
 - [model-viewer docs](https://modelviewer.dev/examples/loading/index.html)
+- [Docs](https://web.dev/articles/model-viewer)
 
 ```
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
@@ -14,6 +15,7 @@ With the help of ```<model-viewer>``` we can able to display the 3D model in the
             camera-controls="1" scale="0.2 0.2 0.2"></model-viewer>
 
 ```
+Download 3D models here for free -> [Free 3D-Models](https://sketchfab.com/features/free-3d-models)
 
 In the above example ```src``` part, i push the 3D model file in the git hub,then using the github link i convert it a jsdelivr link to improve performance.
 
