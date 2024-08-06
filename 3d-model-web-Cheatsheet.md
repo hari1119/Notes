@@ -16,6 +16,7 @@ With the help of ```<model-viewer>``` we can able to display the 3D model in the
 
 ```
 Download 3D models here for free -> [Free 3D-Models](https://sketchfab.com/features/free-3d-models)
+Interactive 3D models -> [spline](https://community.spline.design/)
 
 In the above example ```src``` part, i push the 3D model file in the git hub,then using the github link i convert it a jsdelivr link to improve performance.
 
