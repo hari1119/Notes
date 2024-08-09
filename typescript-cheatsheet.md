@@ -25,7 +25,7 @@ To convert that we need to install
 
  - In the Ts the file end with .ts
  - then the .ts file will convert as a .js file.
- - if we run the ```tsc`` with in the project folder all the .ts files with in the folder converted to .js file.
+ - if we run the ``` tsc ``` with in the project folder all the .ts files with in the folder converted to .js file.
  - if we use the ``` ts-node <file_name>.ts ```, it will not convet, i will run the code and excute the output.
    
 
