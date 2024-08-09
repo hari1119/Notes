@@ -1,3 +1,7 @@
+![image](https://github.com/user-attachments/assets/11e08a25-ab18-48c5-a31c-95969eab6b96)
+
+
+
 | Command | Explanation | Example Use Case |
 | ------- | ----------- | ---------------- |
 | `git clone <required_repo>` | Clones the specified repository, creating a local copy on your machine. | `git clone https://github.com/example/repository.git` |
