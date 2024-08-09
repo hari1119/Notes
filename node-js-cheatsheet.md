@@ -45,4 +45,12 @@ For this if we use the ```bun init``` to create the project means we don't need 
 
 - [Docs](https://blog.stackademic.com/how-to-create-api-documentation-fast-swagger-with-typescript-a5926acbed30)
 
+## Node JS Alternative Versions
 
+ - As a developer we want to work with the multiple node vession, for example OWL is only support >=V12.18.3 and
+ Angual will support v18.19<
+ - For this we can us the ``` n ``` in node.
+ - What is n ? it's a npm lib used to jumb on version to other version in node js.
+ - To install ``` n ``` , use ``` npm install -g n ```
+ - ``` n -h ``` will list the all the opions in the n.
+ - we can able to **upgrade** and **downgrade** the node version.
