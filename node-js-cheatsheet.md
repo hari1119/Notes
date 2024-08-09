@@ -39,4 +39,8 @@ For this if we use the ```bun init``` to create the project means we don't need 
 - [sequelize](https://sequelize.org/)
 - [YouTube](https://www.youtube.com/watch?v=ExTZYpyAn6s)
 
+## Swagger in Node JS
+
+- [Docs](https://blog.stackademic.com/how-to-create-api-documentation-fast-swagger-with-typescript-a5926acbed30)
+
 
