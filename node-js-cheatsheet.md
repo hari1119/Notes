@@ -37,6 +37,6 @@ For this if we use the ```bun init``` to create the project means we don't need 
 ## To Build the ORM in Node JS
 
 - [sequelize](https://sequelize.org/)
-- [![YouTube](https://sequelize.org/img/logo.svg)](https://www.youtube.com/watch?v=ExTZYpyAn6s)
+- [YouTube](https://www.youtube.com/watch?v=ExTZYpyAn6s)
 
 
