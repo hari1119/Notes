@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/2d8c8455-068a-4893-ad0d-45775c8e4426)
+
+
 | Command | Explanation | Use Case |
 |---|---|---|
 | **`docker build`** | **`docker build -t image_name .`** Builds an image from a Dockerfile. | Building a custom Docker image for a web server. |
