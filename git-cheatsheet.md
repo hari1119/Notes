@@ -52,3 +52,12 @@
 | `git ls-remote <remote>` | Displays a list of commit hashes and their corresponding references (branches, tags, etc.). | `git ls-remote origin` |
 | `git reset --hard HEAD^` | Reset the last pull | |
 
+
+## CLA (Contributor License Agreement check) issue:
+   we may face CLA issue becouse of multiple email id, to solve that use the below cmd.
+   - To view all the config ``` git config --list ```
+   - To view the mail ``` git config --get user.email ```
+   - To view the name ``` git config --get user.name ```
+   - To change the mail ``` git config <scope> user.email <new_email> ```
+       - Replace the *scope* with ``` --local ``` , ``` --global ``` and ``` --system ``` 
+
