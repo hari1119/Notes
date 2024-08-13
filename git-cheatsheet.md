@@ -53,7 +53,7 @@
 | `git reset --hard HEAD^` | Reset the last pull | |
 
 
-## CLA (Contributor License Agreement check) issue:
+## CLA (Contributor License Agreement) issue:
    we may face CLA issue becouse of multiple email id, to solve that use the below cmd.
    - To view all the config ``` git config --list ```
    - To view the mail ``` git config --get user.email ```
