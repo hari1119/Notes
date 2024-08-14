@@ -1,7 +1,4 @@
 
-![image](https://github.com/user-attachments/assets/39731801-1231-451d-aefd-b72da5d5fcf5)
-
-
 ### Q-Web Custom Design Template 
 
 # Pages
@@ -44,6 +41,18 @@ $o-website-values-palettes: (
    )
 );
 ```
+
+## To open a report in web
+
+``` http://<server_host>/report/pdf/<model.report_id>/<record_id> ```
+
+**Example**:
+
+``` http://localhost:8069/report/pdf/stock.report_deliveryslip/6 ```
+
+Get the ```<model.report_id>``` from the **settings --> reports** menu.
+```record_id``` is for with transection we want to take report, that record id.
+
 
 
 
