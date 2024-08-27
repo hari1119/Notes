@@ -26,5 +26,6 @@
 | :copen | see open buffer | To see the open buffers |
 
 
+- [Learn More](https://vim.rtorr.com/)
 
 
