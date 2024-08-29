@@ -22,3 +22,7 @@
 - Connect to Database ``` \c db_name ```
 - Quit from the Database ```\q ```
 - Expend the display screen ``` \x ```
+
+## Compare From date and To date
+
+``` from >= "value" and to <= "value" ```
