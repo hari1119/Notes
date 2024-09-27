@@ -1,4 +1,4 @@
-# Create Python Vertual Enviroment.
+# Create Python Virtual Enviroment.
 
 #### Use the below command to change the python version.
  ```
