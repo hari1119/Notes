@@ -7,8 +7,8 @@
 
 #### If you want to install the current python version.
  ```
-    sudo apt-get install <currect-python3.12-version>
-  ```
+ sudo apt-get install <currect-python3.12-version>
+ ```
 
 #### Create the python virtual enviroment with the specific version.
 - Make sure your terget version installed in your local.
