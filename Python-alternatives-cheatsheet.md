@@ -2,7 +2,8 @@
 
  - Instead of ```IF-ElIF``` we can use the python dictionary methods.
  ###### Example
- ```
+ 
+ ```python3
 from collections.abc import Callable
 
 # Function 1 
