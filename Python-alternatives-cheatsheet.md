@@ -119,7 +119,7 @@ else:
     print("Some required fields are missing or empty.")
 ```
 
-### ```any```
+#### ```any```
 
 ```python3
 # List of permissions to the user
@@ -135,3 +135,32 @@ else:
     print("You're a standard user. Not allowed the access.")
 ```
 
+### Using the Comprehensions for Shorter Syntax
+- #### List Comprehensions
+  ##### Example
+
+  ```python3
+    # Nested-if using List Comprehension
+    fruits: list[str] = ["apple", "orange", "avacado", "kiwi", "banana"]
+    basket: list[str] = ["apple", "avacado", "apricot", "kiwi"]
+
+    [i for i in fruits if i in basket if i.startswith("a")] # ['apple', 'avacado']
+  ```
+- #### Tuple Comprehensions
+  ##### Example
+  
+  ```python3
+  # Generator expression converted to a tuple
+  tuple(i**2 for i in range(10))
+
+  # (0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
+  ```
+
+- #### Dictionary Comprehensions
+  ##### Example
+
+    ```python3
+    # Creating a set with condition
+    print({i**2 for i in range(1, 11) if i > 5})
+    # {64, 36, 100, 49, 81}
+    ```
