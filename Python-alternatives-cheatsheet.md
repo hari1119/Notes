@@ -1,4 +1,4 @@
-## Python Advance / Alternative Consept.
+## Python Advance / Alternative Concept.
 
 ### Using Dictionaries to avoid “if-elif” hell
 
