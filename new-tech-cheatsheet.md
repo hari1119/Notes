@@ -95,17 +95,12 @@
   print(config['database']['username'])
   ```
 
-#### 3. mesop
-- mesop is the UI level framework developed by the google, specially for the AI interface.
+#### 4. Hasura
+- Hasura is the opensource to we can able to connect with the database and intract in the GraphiQL.
 
   ###### Local setup
-  - Install mesop
-      - ```pip
-          pip install mesop
-        ```
-  - File Extension
-      - File name followed by .py
-      - ``` <file_name>.py ```
-  - Code Excution
-      - ``` mesop <file_name>.py ```
+
+  - ```docker
+     docker run -d --net=host -e HASURA_GRAPHQL_DATABASE_URL=postgres://odoo:odoo@localhost:5432/odoo18 -e HASURA_GRAPHQL_ENABLE_CONSOLE=true hasura/graphql-engine:latest
+    ```
   
