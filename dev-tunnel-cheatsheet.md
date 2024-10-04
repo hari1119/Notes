@@ -23,3 +23,11 @@ devtunnel --version
 ```
 devtunnel -h
 ```
+To Login into the devtunnel
+
+```
+devtunnel login -d
+```
+ - once u excute the above command, u will get the link and code
+ - copy the code and entry in the give link
+   
