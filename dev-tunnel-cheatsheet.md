@@ -17,5 +17,9 @@ source ~/.bashrc
 To check the installed  status
 
 ```
+devtunnel --version
+```
+
+```
 devtunnel -h
 ```
