@@ -137,5 +137,31 @@
   - [Official FastHTML](https://fastht.ml/)
   - [FastHTML](https://docs.fastht.ml/)
     
+#### 6. PyPDF2
+- To extrac the data from the PDF documents in minimal level
+- 
+  ###### Local setup
+  - Install PyPDF2
+      - ```pip
+          pip install PyPDF2
+        ```
+  - File Extension
+      - File name followed by .py
+      - ``` <file_name>.py ```
+  - Code Excution
+      - ``` Python3 <file_name>.py ```
+
+  **Example**
+  ```python3
+  # Convert: lease.pdf (page 0) -> lease.txt
+  from PyPDF2 import PdfReader
+  reader = PdfReader('GRN-Slip-6.pdf')
+  for re in reader.pages:
+      print(re.extract_text())
+  with open('lease.txt', 'w') as f:
+      f.write(reader.pages[0].extract_text())
+  ```
+  
+  
 
 
