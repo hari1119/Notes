@@ -154,3 +154,168 @@ SET club = new_values.club
 WHERE players.name = new_values.player_name;
 ```
 - Explanation: You can also use ```VALUES``` clause to do a similar thing. The query above updates the ```club``` column in the players table using static data provided in the ```VALUES``` clause. It joins the static values with the ```players``` table on ```name``` to apply the new club values to the corresponding players.
+
+### Window Functions
+- Window functions are powerful tools that allow you to perform calculations across a set of table rows based on the value of a particular column. However, unlike group by, they do not collapse rows into a single result.
+
+#### Example: Comparing the average salary of a club vs player's individual salary
+```
+-- QUERY: window function (partition by)
+SELECT 
+    id,
+    name,
+    salary,
+    AVG(salary) OVER (PARTITION BY club) AS avg_salary_by_club,
+    club
+FROM players;
+-- OUTPUT
+| id | name     | salary   | av_salary_by_club | club    |
+|----|----------|----------|-------------------|---------|
+| 1  | Alvarez  | 20,000   | 100,000           | BFC     |     
+| 2  | Swarez   | 180,000  | 100,000           | BFC     |
+| 3  | Rodrique | 20,000   | 25,000            | RFC     |
+| 4  | Modrique | 30,000   | 25,000            | RFC     |
+
+-- as you can see, avg salary by
+-- club (the partition by column) is calculated 
+-- then it is added to all players that belong
+-- to the club & not grouped by the club.
+
+-- contrast with group by query
+SELECT club, AVG(salary) FROM players GROUP BY club;
+-- OUTPUT
+| av_salary_by_club | club    |
+|-------------------|---------|
+| 100,000           | BFC     |   
+| 25,000            | RFC     |
+```
+- **Explanation**: This query calculates the average salary for each club while still returning individual player records, allowing you to compare each employee’s salary to the club’s average.
+
+### Delete Duplicates
+- All developers come across a time when they need to clean up duplicates in a table. Here’s how you can clean up duplicate records. In the first scenario, we have multiple records in the ```players``` table with the same ```name```, ```jersey_number``` and ```club```. We want to resolve this by keeping the latest inserted data and removing the old ones.
+
+#### Example:
+```
+-- QUERY: deleting duplicate players only keeping the latest records
+WITH duplicates AS (
+    SELECT
+       id,
+      ROW_NUMBER() OVER (
+        PARTITION BY name, jersey_number, club
+        ORDER BY insert_date DESC
+      ) AS rn
+    FROM active_players
+)
+DELETE FROM players
+WHERE id IN (
+    SELECT id FROM duplicates
+    WHERE rn > 1
+);
+```
+- What if even the ID column is duplicated? Well, there’s a system column that PostgreSQL uses to keep track of records called **ctid**. This column is always unique. We can use this to delete the duplicates as shown below.
+
+```
+-- QUERY: identifies duplicates and removes them while keeping the first occurrence.
+WITH duplicates AS (
+    SELECT
+      ctid,
+      ROW_NUMBER() OVER (
+        PARTITION BY id, name, jersery_number, club
+        ORDER BY ctid DESC
+      ) AS rn
+    FROM players
+)
+DELETE FROM players
+WHERE ctid IN (
+    SELECT ctid FROM duplicates
+    WHERE rn > 1
+);
+```
+### Using RETURNING in Update and Delete Queries
+- The ```RETURNING``` clause allows you to immediately retrieve the affected rows after an ```UPDATE``` or ```DELETE``` operation. This is useful for logging or further processing the modified data. I use it to make sure I correctly changed the tables after running delete and update queries.
+
+#### Example:
+```
+-- QUERY: returning the updated records
+UPDATE players
+SET age += 1
+WHERE id = 1001
+RETURNING id, name, age;
+-- OUTPUT
+| id | name    | age |
+|----|---------|-----|
+| 1  | Ronaldo | 50  |
+
+-- QUERY: returning deleted records
+DELETE FROM employees
+WHERE id = 5
+RETURNING id, name;
+-- OUTPUT
+| id | name    |
+|----|---------|
+| 5  | Diwash  |
+```
+
+### Adding a Serial Number Using ROW_NUMBER
+- On my first ever job, I needed to add a serial number in a ```SELECT``` query. I was trying to do some calculations, though I can’t remember exactly what they were. I tried for like 30 minutes and couldn’t figure it out. A senior developer eventually helped me solve the issue without needing the serial number at all.
+
+#### Example:
+```
+-- QUERY
+SELECT *, ROW_NUMBER() OVER (PARTITION BY 1) AS rn
+FROM diwash_test;
+-- OR more simply
+SELECT *, ROW_NUMBER() OVER () AS rn
+FROM diwash_test;
+-- OUTPUT
+| id | name       | rn |
+|----|------------|----|
+| 1  | Messi      | 1  |
+| 2  | Ronaldo    | 2  |
+| 3  | Dembele    | 3  |
+| 5  | Bellingham | 4  |
+| 7  | Mbappe     | 5  |
+```
+
+### ARRAY_AGG & ARRAY CONTAINS(@>)
+- The ```ARRAY_AGG``` function is useful for aggregating values into an array. This is definitely the one aggregation function that I use the most.
+
+#### Example: Find the players who have played for both Real Madrid and Barcelona, along with a list of all the clubs they have played for.
+```
+-- QUERY
+SELECT player_name, ARRAY_AGG(club) clubs FROM player_club_mappings
+GROUP BY player_name
+HAVING ARRAY_AGG(club) @> ARRAY['Barcelona', 'Real Madrid']
+LIMIT 3
+
+-- @> Operator: This is the "contains" operator for arrays
+-- in PostgreSQL. It verifies if the aggregated array
+-- includes all elements of the specified array
+-- (ARRAY['Barcelona', 'Real Madrid']).
+
+-- OUTPUT
+| player_name     | clubs                                                                                                          |
+|-----------------|----------------------------------------------------------------------------------------------------------------|
+| Ronaldo Nazario | {Corinthians, Cruzeiro, Palmeiras, PSV Eindhoven, Barcelona, Inter Milan, Real Madrid, AC Milan}               |
+| Samuel Eto''o   | {Kadji Sports, Union Douala, Canon Yaoundé, Real Madrid, Mallorca, Barcelona, Inter Milan,...}                 |
+| Bernd Schuster  | {1. FC Köln, Hamburger SV, Real Madrid, Barcelona, Paris Saint-Germain, Austria Wien, FC Wil, Atlético Madrid} |
+```
+
+- Explanation: This query aggregates all the clubs that players have played in using ```ARRAY_AGG``` . Then, it filters out only the players that have played with both Barcelona and Real Madrid using```@>``` (array contains).
+
+### SPLIT_PART
+- The ```SPLIT_PART``` function allows you to split a string on a specified delimiter and return the nth substring. This is useful for extracting parts of a string, such as pulling out domain names from email addresses.
+
+#### Example: Pulling out domain names from email addresses
+```
+-- QUERY
+SELECT name, email, SPLIT_PART(email, '@', 2) email_domain AS domain
+FROM players
+LIMIT 3;
+-- OUTPUT
+| name    | email             | email_domain  |
+|---------|-------------------|---------------|
+| Diwash  | diwash@gmail.com  | gmail.com     |
+| Hari    | hari@outlook.com  | outlook.com   |
+| Rudra   | rudra@discord.com | discord.com   |
+```
