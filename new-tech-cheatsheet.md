@@ -103,4 +103,39 @@
   - ```docker
      docker run -d --net=host -e HASURA_GRAPHQL_DATABASE_URL=postgres://odoo:odoo@localhost:5432/odoo18 -e HASURA_GRAPHQL_ENABLE_CONSOLE=true hasura/graphql-engine:latest
     ```
-  
+#### 5. fastHTML
+- fastHTML is the once of the python based web framework to build a web base apps using in pure python.
+- This framework will support Python 3.7 or newer
+  ###### Local setup
+  - Install fastHTML
+      - ```pip
+          pip install python-fasthtml
+        ```
+  - File Extension
+      - File name followed by .py
+      - ``` <file_name>.py ```
+  - Code Excution
+      - ``` Python3 <file_name>.py ```
+
+  **Example**
+  ```python3
+  from fasthtml.common import *
+
+  app, rt = fast_app()
+
+  @rt('/')
+  def get():
+      return Div(P('Hello World!'), hx_get="/change")
+
+  @rt('/change')
+  def get():
+      return P('Nice to be here!')
+
+  serve()
+  ```
+  ###### Docs
+  - [Official FastHTML](https://fastht.ml/)
+  - [FastHTML](https://docs.fastht.ml/)
+    
+
+
