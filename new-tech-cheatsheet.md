@@ -161,7 +161,12 @@
   with open('lease.txt', 'w') as f:
       f.write(reader.pages[0].extract_text())
   ```
-  
+#### 7. Tiiny.host
+- It's a Saas based product, it will help to host the HTML,PDF and so on.
+- It will valid for only 24 hours
+
+###### Ref
+[Tinny.Host](https://tiiny.host/)
   
 
 
