@@ -167,6 +167,12 @@
 
 ###### Ref
 [Tinny.Host](https://tiiny.host/)
+
+#### 8.Open Alternative
+- In this Saas we can able to find the opensource alternative for the closed source products.
+  
+###### Ref
+[Open Alternative](https://openalternative.co/)
   
 
 
