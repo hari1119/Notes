@@ -16,6 +16,26 @@
 ```
 python3.12 -m venv <env_name>
 ```
+## pyenv
+- Once of the opensource for the python version.
+  
+##### Installation 
+```sh
+curl https://pyenv.run | bash
+```
+- Use the above command to download the source
+- Once all done we want to export the path, for that use the below command
+```sh
+export PATH="$HOME/.pyenv/bin:$PATH"
+```
+- Then, activate the source.
+```sh
+source ~/.bashrc
+```
+- Check the version.
+```sh
+pyenv --version
+```
 
 ## Basic Async Python with Asyncio
 
