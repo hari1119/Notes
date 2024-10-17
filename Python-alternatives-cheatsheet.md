@@ -1,5 +1,81 @@
 ## Python Advance / Alternative Concept.
 
+### Use PyProject.toml instead of requirements.txt
+
+- Don’t do it. Stop putting in your README.md “install dependencies with pip install -r requirements.txt”. Can pip do it? Yes. Should you? No. requirements.txt is a accidental standard. Just use pyproject.toml. It makes sense, pip understands it, you can define dev and groups of dependencies in it so you don’t have to start using “dev-requirements.txt” and a slew of cicd pipeline rules.
+
+### Use a python version and project manager like Poetry or UV
+- I’m partial to UV, but I like Poetry too. They both will read the pyproject.toml file, handle dependencies, building, running applications in sandboxes, managing version of python and more. It will take you an hour to read about these tools and it will save you head ache.
+
+At a bare minimum, use a virtual environment like ```venv``` to save yourself some global dependency headaches.
+
+Also UV will install dependencies way faster than pip.
+
+### Use Type hints
+- Use hints to understand the code.
+```python3
+def alter_map(data: Map) -> None:
+""" Alters data in a 2d map. Alters the object refernced directly
+"""
+  for x in map:
+    for y in map[x]:
+      transmute(map[x][y])
+```
+### Add a Raises section to your function docstrings
+
+```python3
+from typing import Dict, Any, optional
+
+def query_db(query: SqlQuery) -> Optional[Dict[str, Any]:
+  """Calls the database
+  Args:
+    ...
+
+  Raises:
+    ClientException: you goofed up
+    TimeoutException: db took too long
+    ConnectionException: something is wrong with your network
+
+  Returns:
+    The response from the query, if any.
+  """
+```
+
+### Use a linter and formatter like Ruff
+
+- Javascript projects have prettier and its a near standard at this point. In Python, use ruff (which copies Black’s formatting standard) and its fast. it also will lint common issues that you might have missed. this linting is not as in depth as a static analysis tool like mypy, but sure does help.
+
+- While you’re add it, add a few of these opt-in rules into your pyproject.toml to make your code base even better:
+
+```toml
+[tool.ruff]
+target-version = "py12"
+
+[tool.ruff.lint]
+extend-select: [
+  'D', #pydocstyle
+  'E', 'W', # pycodestyle
+  'F', #pyflakes
+  'I', # sort imports
+  'UP', #pyupgrade
+  "RUF",  # ruff dev's own rules
+  "SIM", # pyflakes simplicity
+  "C90", # more complexity rules
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-commas = false
+```
+
+### Use Pytest over unittest
+
+- Where is makes sense to convert, use pytest over unittest. The pytest fixtures are very helpful and composable.
+
+
 ### Using Dictionaries to avoid “if-elif” hell
 
  - Instead of ```IF-ElIF``` we can use the python dictionary methods.
