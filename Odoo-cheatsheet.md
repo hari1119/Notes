@@ -1,3 +1,14 @@
+### Uninstall module in CLI
+- get into the odoo shell using below cmd.
+  
+  ```bash
+    python3 odoo-bin shell -c odoo.config
+  ```
+- run the code mentioned below.
+  ```bash
+   self.env['ir.module.module'].search([('name', '=', '<module_name>')]).button_immediate_uninstall()
+  ```
+  
 ### Odoo Scaffold cmd
 
 ```bash
