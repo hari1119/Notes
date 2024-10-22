@@ -1,9 +1,9 @@
 ### Odoo Scaffold cmd
 
 ```bash
-   python3 odoo-bin <module_name> <addons_path>
+   python3 odoo-bin scaffold <module_name> <addons_path>
 
-   Python3 odoo-bin -t <module_template> <module_name> <addons_path>
+   Python3 odoo-bin scaffold -t <module_template> <module_name> <addons_path>
 
 ```
 
