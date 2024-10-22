@@ -1,3 +1,14 @@
+### Odoo Scaffold cmd
+
+```bash
+   python3 odoo-bin <module_name> <addons_path>
+
+   Python3 odoo-bin -t <module_template> <module_name> <addons_path>
+
+```
+
+
+
 ### Useful Environment Methods
 - **env.ref(xml_id, raise_if_not_found=True)**
   - The ref() method is useful for developers aiming to fetch records using XML IDs. By providing an external identifier (module_name.id), this function returns the corresponding recordset. It also offers an optional parameter, raise_if_not_found, which defaults to True and triggers a ValueError if the external ID (xml_id) is not found in the system.
