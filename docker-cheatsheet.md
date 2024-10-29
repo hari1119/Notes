@@ -26,3 +26,12 @@
 | **`docker logs <container_name>`** | Fetches logs of a container. | Inspecting container logs for troubleshooting. |
 | **`docker inspect <container_name / image_id / short_id>`** | Returns low-level information about a container, image, or task. | Retrieving detailed information about Docker resources. |
 | **`docker-compose`** | Manages multi-container Docker applications. | Orchestrating the deployment of multiple Docker containers. |
+
+
+
+### pg_dump from the postgresql docker container.
+
+```bash
+   docker exec -t <container_name_or_id> pg_dump -U <username> -d <database_name> > /local/path/dump.sql
+```
+
