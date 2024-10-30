@@ -27,4 +27,27 @@
 - FullCalendar offers an intuitive, full-featured calendar interface with customizable event management, drag-and-drop, and timeline views.
 - [FullCalendar](https://floating-ui.com/)
 
+##### Animate.css
+- You can quickly add pre-designed animations to your web elements with Animate.css.
+- [Animate.css](https://animate.style/)
+
+##### Lottie by Airbnb
+- It’s useful for integrating high-quality animations into your web apps.
+- [Lottie by Airbnb](https://lottiefiles.com/)
+
+##### Tippy.js
+- A lightweight, extensible library for creating beautiful, highly customizable tooltips, popovers, dropdowns, and more.
+- [Tippy.js](https://atomiks.github.io/tippyjs/)
+
+##### Swiper
+- Swiper is a free and powerful tool used to make touch sliders and carousels. It gives smooth transitions and works well on different screen sizes, making it perfect for mobile-friendly projects.
+- [Swiper](https://swiperjs.com/)
+
+##### Vivus
+- Create stunning, animated SVG drawings with Vivus. This lightweight JavaScript library lets you animate SVGs by simulating the drawing process, adding a unique touch to your graphics.
+- [Vivus](https://maxwellito.github.io/vivus/)
+
+
+#### ... For More [click](https://shefali.dev/blog/)
+
 
