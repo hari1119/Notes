@@ -168,5 +168,27 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-  
-  
+
+### 3. PymuPDF4llm
+ you’ve got a PDF filled with images, text, and tables. It’s a chaotic mess, and you’re staring at it with a sense of dread. But then you unleash Pymupdf4llm, and it effortlessly extracts the information, organizing it into a beautiful, markdown format. Talk about a productivity boost!
+
+##### Install
+
+```
+pip install pymupdf4llm
+```
+
+##### Example
+```python
+
+import pymupdf4llm
+
+md_text = pymupdf4llm.to_markdown("input.pdf")
+print(md_text)
+```
+
+#### Source
+
+- [git](https://github.com/pymupdf/RAG/tree/main/pymupdf4llm)
+- [pip](https://pypi.org/project/pymupdf4llm/)
+
