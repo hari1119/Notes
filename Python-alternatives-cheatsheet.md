@@ -1,5 +1,72 @@
 ## Python Advance / Alternative Concept.
 
+### Use httpx instead of Requests
+- For parallel processing of requests, httpxprovides a similar API but with asynchronous support. So, if you make many API calls, it’ll save you some time and resources because it will process those requests concurrently.
+
+- **Example**
+  ```python3
+   import httpx
+
+   async def fetch_data(url):
+      async with httpx.AsyncClient() as client:
+          response = await client.get(url)
+          return response.json()
+
+   # Simple and non-blocking
+   data = fetch_data("https://api.example.com/data")
+
+  ```
+### Use selectolax instead of BeautifulSoup
+- selectolax is a less famous library that uses libxml2 for better performance and with less memory consumption.
+- **Example**
+  ```python3
+  from selectolax.parser import HTMLParser
+
+  html_content = "<html><body><p>Test</p></body></html>"
+  tree = HTMLParser(html_content)
+  text = tree.css("p")[0].text()
+  print(text)  # Output: Test
+  ```
+### Use Polars instead of Pandas
+- Polars is an ultra-fast DataFrame library in Rust using Apache Arrow. Optimized for memory efficiency and multithreaded performance, this makes it perfect for when you want to crunch data without heating up your CPU.
+- **Example**
+  ```python3
+  import polars as pl
+
+  df = pl.read_csv("big_data.csv")
+  filtered_df = df.filter(pl.col("value") > 50)
+  print(filtered_df)
+  ```
+### Use Plotly instead of Matplotlib.
+- Where visualization cleanliness and interactivity matter, and definitely don’t want a pile of code, Plotly is great. This is especially useful when you have to share visuals fast or within presentations on the web.
+- **Example**
+  ```python3
+  import plotly.express as px
+
+  df = px.data.iris()
+  fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species")
+  fig.show()
+  ```
+### Use PyTorch instead of Scikit-learn
+- PyTorch is more general and supports GPU. Hence, it’s perfect for deep learning projects. It’s Pythonic-this means for one coming from Scikit-Learn, it will feel natural, but with much more power.
+- **Example**
+  ```python3
+  import torch
+  import torch.nn as nn
+  import torch.optim as optim
+
+  # Define a simple model
+  model = nn.Sequential(
+    nn.Linear(10, 5),
+    nn.ReLU(),
+    nn.Linear(5, 2)
+  )
+
+  # Define optimizer and loss
+  optimizer = optim.SGD(model.parameters(), lr=0.01)
+  loss_fn = nn.CrossEntropyLoss()
+  ```
+  
 ### Use PyProject.toml instead of requirements.txt
 
 - Don’t do it. Stop putting in your README.md “install dependencies with pip install -r requirements.txt”. Can pip do it? Yes. Should you? No. requirements.txt is a accidental standard. Just use pyproject.toml. It makes sense, pip understands it, you can define dev and groups of dependencies in it so you don’t have to start using “dev-requirements.txt” and a slew of cicd pipeline rules.
