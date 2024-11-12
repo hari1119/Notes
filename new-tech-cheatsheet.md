@@ -173,6 +173,26 @@
   
 ###### Ref
 [Open Alternative](https://openalternative.co/)
+
+#### 9.Jan
+- Jan is the collection of GPT model AI souce,It's avilable in online and offfline mode.
+
+###### Ref
+[Jan](https://jan.ai/)
+
+#### 10.Jan
+- It's a tool to shart list you link, it's help full to hide the orginal link while sharing, once the link will open in the brower means original link will visible.
+
+###### Ref
+[dub](https://dub.co/)
+
+#### 11.Tabby
+- Tabby is an open-source coding assistant that integrates AI into your code editor
+- It's available in VS code.
   
+#### Ref
+[Tabby](https://www.tabbyml.com/)
+
+
 
 
