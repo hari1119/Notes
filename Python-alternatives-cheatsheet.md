@@ -1,3 +1,71 @@
+
+## List Comprehensions for File Operations.
+
+- File handling in list comprehensions.
+
+- **Example**
+  ```python3
+     # One-liner
+     [file.write(line) for line in lines]
+  ```
+
+## Chain Assignment in Conditionals.
+
+- **Example**
+  ```python3
+     # One-liner
+     x = y = get_value() if condition else None
+  ```
+
+## ```eval()``` for Dynamic Expressions.
+
+- eval() is the heavyweight champion of dangerous one-liners. It runs any expression as code, making it a prime target for code injection attacks if the input isn’t tightly controlled.
+
+- **Example**
+  ```python3
+     # One-liner
+     result = eval("2 + 2")
+  ```
+
+## Multiple Dictionary Updates in One Line.
+
+- **Example**
+  ```python3
+     # One-liner
+     {**dict1, **dict2, **dict3}
+  ```
+  
+## The ```try/except``` Inside a Comprehension
+
+- **Example**
+  ```python3
+     # One-liner
+     result = [x / y if y != 0 else 0 for x, y in zip(numerators, denominators)]
+  ```
+## Using lambda Expressions for Complex Logic.
+
+- **Example**
+  ```python3
+     # One-liner 
+     calculate = lambda x: (x + 10) * (x / 2) - 5 if x > 0 else -1
+  ```
+  
+## Using lambda Expressions for Complex Logic.
+
+- **Example**
+  ```python3
+     # One-liner 
+     calculate = lambda x: (x + 10) * (x / 2) - 5 if x > 0 else -1
+  ```
+
+ ## Using *args for Flexible Parameters in Lambdas
+
+- **Example**
+  ```python3
+     # One-liner
+     sum_all = lambda *args: sum(args)
+  ```
+
 ## Python Advance / Alternative Concept.
 
 ### Use httpx instead of Requests
