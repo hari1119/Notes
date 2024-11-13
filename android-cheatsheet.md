@@ -119,6 +119,8 @@ dependencies:
 - Change the following verssion.
 - ```compileSdkVersion 34```
 - ```minSdkVersion 19```
+- minSdkVersion 19 means that your app can run on Android devices with API level 19 or higher. API level 19 corresponds to Android 4.4 (KitKat).
+- **Notes:** minSdkVersion will be change based on the currect version.
   
 ```gradle
 plugins {
