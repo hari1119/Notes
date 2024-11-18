@@ -214,3 +214,26 @@ while True:
     sleep(50)
 ```
 
+### 5. Log the clip borad history in python
+
+```python3
+import pyperclip
+import time
+
+def log_clipboard():
+    previous = ""
+    while True:
+        try:
+            current = pyperclip.paste()
+            if current != previous:
+                with open("clipboard_log.txt", "a") as log:
+                    log.write(f"{current}\n")
+                previous = current
+        except pyperclip.PyperclipException as e:
+            print(f"Error reading clipboard: {e}")
+
+        time.sleep(1)
+
+log_clipboard()
+```
+
