@@ -192,3 +192,25 @@ print(md_text)
 - [git](https://github.com/pymupdf/RAG/tree/main/pymupdf4llm)
 - [pip](https://pypi.org/project/pymupdf4llm/)
 
+### 4. To check the battery life of the machine using python
+
+```python3
+
+from plyer import notification
+import psutil
+from icecream import ic
+from time import sleep
+
+while True:
+    battery = psutil.sensors_battery()
+    life = battery.percent
+    ic(f"Battery Life Now Is {life}")
+    if life < 80:
+        notification.notify(
+            title="Battery Low",
+            message="Please connect to a power source",
+            timeout=10
+        )
+    sleep(50)
+```
+
