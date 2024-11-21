@@ -71,10 +71,6 @@
    The .gitignore file is a text file telling Git what files/folders to ignore.
    - we added “hello*.py” into our .gitignore file
 
-## 3) git push origin HEAD
-   We can use “git push origin HEAD” over “git push origin longass_branch_name”
-   - You can avoid the miss branch pull lead to a conflict issues
-
 
 
 
