@@ -1,3 +1,9 @@
+### Odoo ORM between range.
+```python3
+   ('minimum', '<=', value),('maximum','>=', value)
+```
+
+
 ### Uninstall module in CLI
 - get into the odoo shell using below cmd.
   
