@@ -236,4 +236,84 @@ def log_clipboard():
 
 log_clipboard()
 ```
+### 6. PDF to Text in python.
+- PyMuPDF4LLM in my own work, from basic text extraction to more complex use cases like chunking, table extraction, and more. The versatility of this tool is truly impressive, making it the best option for many LLM-related tasks.
+  
+```sh
+pip install pymupdf4llm
+```
 
+  - Use Case 1: Basic Markdown Extraction
+    ```python3
+    import pymupdf4llm
+
+    # Extract PDF content as Markdown
+    md_text = pymupdf4llm.to_markdown("input.pdf")
+    print(md_text[:500])  # Print first 500 characters
+    ```
+ - Use Case 2: Extracting Specific Pages
+   ```python3
+   import pymupdf4llm
+
+   # Extract only pages 10 and 11
+   md_text = pymupdf4llm.to_markdown("bengio03a.pdf", pages=[10, 11])
+   print(md_text[:500])  # Print first 500 characters
+   ```
+ - Use Case 3: Saving Markdown to a File
+   ```python3
+   import pymupdf4llm
+   import pathlib
+
+   md_text = pymupdf4llm.to_markdown("bengio03a.pdf")
+   pathlib.Path("output.md").write_bytes(md_text.encode())
+   print("Markdown saved to output.md")
+   ```
+ - Use Case 4: Extracting Data as LlamaIndex Documents
+   ```python3
+   import pymupdf4llm
+
+   llama_reader = pymupdf4llm.LlamaMarkdownReader()
+   llama_docs = llama_reader.load_data("bengio03a.pdf")
+   print(f"Number of LlamaIndex documents: {len(llama_docs)}")
+   print(f"Content of first document: {llama_docs[0].text[:500]}")
+   ```
+ - Use Case 5: Image Extraction
+   ```python3
+      md_text_images = pymupdf4llm.to_markdown(doc="bengio03a.pdf",
+                                         pages=[1, 11],
+                                         page_chunks=True,
+                                         write_images=True,
+                                         image_path="images",
+                                         image_format="jpg",
+                                         dpi=200)
+     print(md_text_images[0]['images'])  # Print image information from the first chunk
+   ```
+- Use Case 6: Chunking with Metadata
+  ```python3
+  md_text_chunks = pymupdf4llm.to_markdown(doc="bengio03a.pdf",
+                                         pages=[0, 1, 2],
+                                         page_chunks=True)
+  print(md_text_chunks[0])  # Print the first chunk
+  ```
+- Use Case 7: Word-by-Word Extraction
+  ```python3
+    md_text_words = pymupdf4llm.to_markdown(doc="bengio03a.pdf",
+                                        pages=[1,2],
+                                        page_chunks=True,
+                                        write_images=True,
+                                        image_path="images",
+                                        image_format="jpg",
+                                        dpi=200,
+                                        extract_words=True)
+    print(md_text_words[0]['words'][:5])  # Print the first 5 words from the first chunk
+  ```
+- Use Case 8: Table Extraction
+  ```python3
+  import pymupdf4llm
+  import json
+
+   md_text_tables = pymupdf4llm.to_markdown(doc="bengio03a.pdf",
+                                         pages=[12],  # Specify pages containing tables
+                                         )
+   print(md_text_tables)
+  ```
