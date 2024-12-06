@@ -319,3 +319,41 @@ LIMIT 3;
 | Hari    | hari@outlook.com  | outlook.com   |
 | Rudra   | rudra@discord.com | discord.com   |
 ```
+
+### Enabled audit log in the DB.
+- Audit log used to tracking the Create, Delete,Update changes in the Data.
+![image](https://github.com/user-attachments/assets/bfe5c0b4-9440-4ccd-ae78-a3a969dd59ba)
+
+- **Step 1: Create an Audit Schema and Table**
+    ```sql
+    -- Create a schema named "audit"
+    CREATE SCHEMA audit;
+    REVOKE CREATE ON SCHEMA audit FROM public;
+
+    CREATE TABLE audit.logged_actions (
+        schema_name TEXT NOT NULL,
+        table_name TEXT NOT NULL,
+        record_id INTEGER NOT NULL,
+        user_name TEXT,
+        action_tstamp TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        action TEXT NOT NULL CHECK (action IN ('I', 'D', 'U')),
+        original_data TEXT,
+        new_data TEXT,
+        query TEXT
+    ) WITH (fillfactor=100);
+
+    REVOKE ALL ON audit.logged_actions FROM public;
+    GRANT SELECT ON audit.logged_actions TO public;
+    ```
+ - This logged_actions table will store the details of each change. The action column will record the type of action (I for insert, D for delete, U for update). You can add indexes on frequently queried columns for optimized performance.
+   ```sql
+   CREATE INDEX logged_actions_schema_table_idx
+   ON audit.logged_actions(((schema_name || '.' || table_name)::TEXT));
+
+   CREATE INDEX logged_actions_action_tstamp_idx 
+   ON audit.logged_actions(action_tstamp);
+
+   CREATE INDEX logged_actions_action_idx 
+   ON audit.logged_actions(action);
+   ```
+
