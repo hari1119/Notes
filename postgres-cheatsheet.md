@@ -413,6 +413,7 @@ LIMIT 3;
    AFTER INSERT OR UPDATE OR DELETE ON tablename
     FOR EACH ROW EXECUTE FUNCTION audit.log_current_action();
    ```
+   [Ref Code in Github](https://github.com/ihcene/audited_database)
    [Link](https://medium.com/@ihcnemed/postgresql-record-every-change-in-your-database-a98a6586527c)
 
 
