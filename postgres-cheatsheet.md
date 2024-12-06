@@ -356,4 +356,63 @@ LIMIT 3;
    CREATE INDEX logged_actions_action_idx 
    ON audit.logged_actions(action);
    ```
+- **Step 2: Define the Trigger Function**
+  - The following trigger function will insert a record into audit.logged_actions every time a row in the target table is modified.
+  ```sql
+  CREATE OR REPLACE FUNCTION audit.log_current_action() RETURNS trigger AS $body$
+  DECLARE
+    v_old_data TEXT;
+    v_new_data TEXT;
+  BEGIN
+    IF (TG_OP = 'UPDATE') THEN
+        v_old_data := ROW(OLD.*);
+        v_new_data := ROW(NEW.*);
+        INSERT INTO audit.logged_actions 
+        (schema_name, table_name, record_id, user_name, action, original_data, new_data, query)
+        VALUES 
+        (TG_TABLE_SCHEMA::TEXT, TG_TABLE_NAME::TEXT, NEW.id, session_user::TEXT, substring(TG_OP,1,1), v_old_data, v_new_data, current_query());
+        RETURN NEW;
+    ELSIF (TG_OP = 'DELETE') THEN
+        v_old_data := ROW(OLD.*);
+        INSERT INTO audit.logged_actions 
+        (schema_name, table_name, record_id, user_name, action, original_data, query)
+        VALUES 
+        (TG_TABLE_SCHEMA::TEXT, TG_TABLE_NAME::TEXT, OLD.id, session_user::TEXT, substring(TG_OP,1,1), v_old_data, current_query());
+        RETURN OLD;
+    ELSIF (TG_OP = 'INSERT') THEN
+        v_new_data := ROW(NEW.*);
+        INSERT INTO audit.logged_actions 
+        (schema_name, table_name, record_id, user_name, action, new_data, query)
+        VALUES 
+        (TG_TABLE_SCHEMA::TEXT, TG_TABLE_NAME::TEXT, NEW.id, session_user::TEXT, substring(TG_OP,1,1), v_new_data, current_query());
+        RETURN NEW;
+    ELSE
+        RAISE WARNING '[AUDIT.LOG_CURRENT_ACTION] - Other action occurred: %, at %', TG_OP, now();
+        RETURN NULL;
+    END IF;
+   EXCEPTION
+    WHEN data_exception THEN
+        RAISE WARNING '[AUDIT.LOG_CURRENT_ACTION] - Data Exception';
+        RETURN NULL;
+    WHEN unique_violation THEN
+        RAISE WARNING '[AUDIT.LOG_CURRENT_ACTION] - Unique Violation';
+        RETURN NULL;
+    WHEN others THEN
+        RAISE WARNING '[AUDIT.LOG_CURRENT_ACTION] - Other Exception';
+        RETURN NULL;
+   END;
+   $body$
+   LANGUAGE plpgsql
+   SECURITY DEFINER
+   SET search_path = pg_catalog, audit;
+  ```
+ - Step 3: Attach Triggers to Tables
+   - Add this trigger function to each table you want to audit:
+   ```sql
+   CREATE TRIGGER tablename_audit
+   AFTER INSERT OR UPDATE OR DELETE ON tablename
+    FOR EACH ROW EXECUTE FUNCTION audit.log_current_action();
+   ```
+   [Link](https://medium.com/@ihcnemed/postgresql-record-every-change-in-your-database-a98a6586527c)
+
 
