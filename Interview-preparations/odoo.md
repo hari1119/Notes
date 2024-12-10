@@ -50,4 +50,22 @@
            # Your custom logic here
            return result
    ```
-6.
+
+
+```python3
+
+import UserError
+
+
+
+
+def action_confirm:
+     self.check_user_payment()
+     super()
+
+def check_user_payment(self):
+     invoice = self.env['account.move'].search([('partner_id', '=', self.partner_id.id),('state', 'not in', ['posted'])])
+     reminding_amt = sum([inv.amount_residual for inv in invoice])
+     if reminding_amt >= 1000:
+         raise UserError("Customer have the pending payment")
+```
