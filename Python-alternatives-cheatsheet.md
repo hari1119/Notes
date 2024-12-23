@@ -454,3 +454,93 @@ The operation is performed by looking up the function in the dictionary and call
   - Readable and intuitive.
   - Eliminates the need for nested conditions.
   - Modern Python feature.
+
+  4.Dictionary Dispatch:
+     - Use a dictionary to map operations to corresponding functions.
+       
+  ``` python3
+
+  def add(x, y): return x + y
+  def subtract(x, y): return x - y
+  def multiply(x, y): return x * y
+  def divide(x, y): return x / y
+
+  operations = {
+    '+': add,
+    '-': subtract,
+    '*': multiply,
+    '/': divide
+  }
+
+  operation = input("Enter operation (+, -, *, /): ")
+  x = float(input("Enter first number: "))
+  y = float(input("Enter second number: "))
+
+  result = operations[operation](x, y)
+  print(result)
+  ```
+
+  5. Lambda Functions:
+     - Use lambda functions within a dictionary to handle operations.
+       
+  ```python3
+  operations = {
+    '+': lambda x, y: x + y,
+    '-': lambda x, y: x - y,
+    '*': lambda x, y: x * y,
+    '/': lambda x, y: x / y
+   }
+
+  operation = input("Enter operation (+, -, *, /): ")
+  x = float(input("Enter first number: "))
+  y = float(input("Enter second number: "))
+
+  result = operations[operation](x, y)
+  print(result)
+  ```
+  6.Object-Oriented Approach:
+    - Use classes and methods to encapsulate the operations.
+
+  ```python3
+  class Calculator:
+    def add(self, x, y): return x + y
+    def subtract(self, x, y): return x - y
+    def multiply(self, x, y): return x * y
+    def divide(self, x, y): return x / y
+
+  calc = Calculator()
+  operations = {
+    '+': calc.add,
+    '-': calc.subtract,
+    '*': calc.multiply,
+    '/': calc.divide
+  }
+
+  operation = input("Enter operation (+, -, *, /): ")
+  x = float(input("Enter first number: "))
+  y = float(input("Enter second number: "))
+
+  result = operations[operation](x, y)
+  print(result)
+  ```
+7.Function Mapping:
+  - Define functions and map them directly for execution.
+```python3
+   def calculate(operation, x, y):
+      return {
+        '+': x + y,
+        '-': x - y,
+        '*': x * y,
+        '/': x / y
+      }.get(operation, "Invalid operation")
+
+   operation = input("Enter operation (+, -, *, /): ")
+   x = float(input("Enter first number: "))
+   y = float(input("Enter second number: "))
+
+   result = calculate(operation, x, y)
+   print(result)
+```
+
+  
+  
