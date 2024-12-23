@@ -193,6 +193,81 @@
 ###### Ref
 [Tabby](https://www.tabbyml.com/)
 
+#### 12. Animate Any Drawing
+- Ever dreamed of animating your doodles? This tool lets you take any drawing, highlight the character, and bring it to life with fun, pre-set animations. Whether it’s a dancing astronaut or a waving stick figure, the possibilities are endless.
+###### Ref
+[sketch](https://sketch.metademolab.com/)
+
+#### 13. Free Text-to-Speech Converter
+- Gone are the days of robotic text-to-speech voices. This tool produces human-like audio from any text. It’s perfect for presentations, audiobooks, or just testing out different accents.
+  
+###### Ref
+[Link](https://www.text-to-speech.online/)
+
+#### 14. AI Headshot Generator
+- Need a polished headshot without booking a photographer? This tool uses AI to transform any photo into a professional-looking portrait.
+###### Ref
+[Link](https://supawork.ai/ai-professional-headshot-generator)
+
+#### 15. Summarize PDFs in Seconds
+- Studying or working with long documents? This summarizer can save hours by condensing PDFs into concise summaries or detailed outlines.
+
+###### Ref
+[Link](https://documator.cc/)
+
+#### 16. Transcribe Audio and Video
+- Whether you’re a podcaster, YouTuber, or journalist, this transcription tool by Riverside is a lifesaver. Upload your audio or video, and let the AI handle the rest.
+
+###### Ref
+[Link](https://riverside.fm/transcription)
+
+
+#### 17. Infographic Generator
+- Turn your ideas into professional infographics with just a few clicks. Whether you need timelines, lists, or process diagrams, this tool has you covered.
+
+###### Ref
+[Link](https://infografix.app/)
+
+#### 18. Explore Topics with Whybot
+- Whybot isn’t just a search engine — it’s a visual learning tool. Type in a question, and it generates a mind map that keeps expanding as you dig deeper into the topic.
+
+###### Ref
+[Link](https://whybot-khaki.vercel.app/)
+
+#### 19. ChatGPT Prompt Generator
+- Crafting the perfect prompt can be tricky, but this tool simplifies the process. Enter a role and task, and it generates a detailed, optimized prompt for you to use in ChatGPT or similar tools.
+
+###### Ref
+[Link](https://www.prompthackers.co/chatgpt-prompt-generator)
+
+
+#### 20. NotebookLM by Google
+- This AI assistant lets you upload your own sources, turning them into an interactive, podcast-style conversation.
+
+###### Ref
+[Link](https://notebooklm.google.com/)
+
+#### 20. Coloring Page Creator
+- Looking for a fun activity? This tool generates printable coloring pages based on your prompts. Perfect for parents, teachers, or anyone who loves to color!
+
+###### Ref
+[Link](https://color-anything.com/)
+
+#### 20. Coloring Page Creator
+- Say goodbye to boring playlists! Chat Jams creates personalized Spotify playlists based on your favorite genres or moods.
+
+###### Ref
+[Link](https://www.chatjams.ai/)
+
+
+
+
+
+
+
+
+
+
 
 
 
