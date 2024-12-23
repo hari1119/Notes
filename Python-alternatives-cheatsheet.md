@@ -375,3 +375,82 @@ else:
     print({i**2 for i in range(1, 11) if i > 5})
     # {64, 36, 100, 49, 81}
     ```
+
+- #### Arithmetic Operations.
+  1. Using the ```operator``` Module
+     - The ```operator``` module in Python provides function equivalents for standard arithmetic operators. By mapping these functions to their respective symbols, you can create a dictionary to perform operations dynamically.
+  ##### Example
+
+  ```python3
+  import operator
+
+  action = {
+    "+" : operator.add,
+    "-" : operator.sub,
+    "/" : operator.truediv,
+    "*" : operator.mul,
+    "**" : pow  # Power operator
+  } 
+
+  print(action['/'](37, 5))  # Output: 7.4
+  ```
+  **How It Works:**
+    - A dictionary maps operation symbols (+, -, etc.) to their corresponding functions from the operator module.
+The operation is performed by looking up the function in the dictionary and calling it with the operands.
+
+  **Advantages:**
+
+   - Clean and highly readable.
+   - Avoids repetitive code.
+   - Easily extendable by adding more operations.
+     
+  2. Using ```eval()``` for Dynamic Evaluation
+     - The eval() function evaluates a string expression in Python, allowing arithmetic operations to be performed dynamically based on user input or parameters.
+
+  ```python3
+  def calculator(a, b, operation):
+    return eval(f"{a} {operation} {b}")
+
+  print(calculator(37, 5, '/'))  # Output: 7.4
+  ```
+
+  **How It Works:**
+     - The ```eval()``` function takes a formatted string that combines the operands and operator into an evaluable expression.
+     - The function directly computes the result based on the provided operation.
+    
+  **Advantages**:
+     - Simple and concise.
+     - Eliminates the need for external libraries or extensive control logic.
+  **Caution**:
+     - Security Risk: Avoid using eval() with untrusted input, as it can execute arbitrary code and pose security threats.
+
+  3. Using ```match``` and ```case```   
+     - Python 3.10 introduced the match statement, which provides a pattern-matching mechanism. It offers a structured way to replace conditional logic like if/else for certain scenarios.
+
+  ```python3
+     def calculator(a, b, operation):
+        match operation:
+            case '+':
+                return a + b
+            case '-':
+                return a - b
+            case '*':
+                return a * b
+            case '/':
+                return a / b
+            case _:
+                return "Invalid operation"
+
+    print(calculator(37, 5, '/'))  # Output: 7.4
+
+  ```
+
+  **How It Works:**
+  - The ```match``` statement checks the operation value against predefined cases.
+  - Each ```case``` corresponds to an arithmetic operation and returns the result.
+  - The ```_``` wildcard acts as a default case for unsupported operations.
+    
+  **Advantages:**
+  - Readable and intuitive.
+  - Eliminates the need for nested conditions.
+  - Modern Python feature.
