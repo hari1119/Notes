@@ -247,7 +247,7 @@
 ###### Ref
 [Link](https://notebooklm.google.com/)
 
-#### 20. Coloring Page Creator
+#### 21. Chat Jams — Spotify Playlist Generator
 - Looking for a fun activity? This tool generates printable coloring pages based on your prompts. Perfect for parents, teachers, or anyone who loves to color!
 
 ###### Ref
