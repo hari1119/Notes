@@ -51,14 +51,62 @@
            return result
    ```
 
+---
+
+Ksolve L2 interview questions: 
+
+1. Abstract Model: What is an abstract model in Odoo, and how is it used to create a base model for other models to inherit from?
+
+2. Odoo Inheritance: Explain the different types of inheritance in Odoo (e.g., _inherits, _name, _description) and provide an example of how to use each type.
+
+3. Compute Field Reuse: If a compute field is already used in another compute field, what will happen if you try to use it again in another compute field, and how can you avoid any potential issues?
+
+4. Search_read: What is the purpose of the search_read method in Odoo, and how is it used to retrieve data from a model?
+
+5. Search_read vs Mapped: Which is faster, search_read or mapped, and why? Provide an example to illustrate the difference.
+
+6. Lambda Filter vs Search: Which is faster, using a lambda filter or the search method, and why? Provide an example to illustrate the difference.
+
+7. Search([]): Is using search([]) correct and recommended? If not, what is an alternative way to achieve the same result?
+
+8. Compute Function Search: Will the search method work inside a compute function, and if so, how?
+
+9. Routes and Pull/Push Rules: Explain how routes and pull/push rules are used in Odoo to manage data exchange between different models.
+
+10. Join and Union in PostgreSQL: How are join and union operations used in PostgreSQL, and provide an example of how to use each operation?
+
+11. Group Access and Delete: If one group has delete access to a particular model, and another group does not, what will happen if a user has access to both groups? Is there a formula to determine the resulting access level?
+
+12. Controller Route and Module Installation: If a controller route is enabled, but the module is not installed, will the route still work? If not, how can you create a route that works even if the module is not installed?
+
+13. Automatic Function Creation: How does Odoo automatically create functions, and what are the benefits and limitations of this feature?
+
+14. Web Hooks, Hosting, and Odoo Configuration: Explain how web hooks, hosting, and Odoo configuration are related, and provide an example of how to set up a web hook in Odoo.
+
+15. Owl.js: What is Owl.js, and how is it used in Odoo to create interactive web pages?
+
+16. Class or Prototype Inheritance: What are the constraints of using class or prototype inheritance in Odoo, and how do they affect the behavior of the inherited models?
+
+17. User Access Group: How do user access groups work in Odoo, and what are the benefits of using them to manage access to different models?
+
+18. Context in Odoo: What is the context in Odoo, and how is it used to pass parameters and variables between different functions and models?
+
+
+---
+
+### Odoo Technical Term
+
 
 ![image](https://github.com/user-attachments/assets/bc5b4a2d-914b-496e-9b4e-d3090346f301)
 
 
 
+---
 
+### Task 
+  - restrict the same customor having payment pending above 1000$ while converting the quotation to sale order in odoo.
 
-
+### solution:
 ```python3
 
 import UserError
