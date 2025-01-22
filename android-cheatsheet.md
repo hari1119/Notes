@@ -8,7 +8,7 @@
 
 
 #### Edit the ```Main.dart``` file
-- ```project/web/lib/Main.dart```
+- ```project/lib/Main.dart```
 - ```title``` change the title based on you need,
 - Replace the below code in the ```Main.dart``` file.
 
