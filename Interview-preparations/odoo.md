@@ -91,6 +91,48 @@ Ksolve L2 interview questions:
 
 18. Context in Odoo: What is the context in Odoo, and how is it used to pass parameters and variables between different functions and models?
 
+---
+
+
+1. What are the ORM methords in odoo? | - create , write, unlink, copy, search, search_read, search_count, browse
+2. If we have A and B tow deffrenct servers, use to write the A server date in a B server datebase without end endpoint.
+3. What is read_group?
+4. what is get_view in odoo?
+5. Explain view side inheritance ? | - with the view id we can able to inherit and over ride the view in odoo.
+6. Difference between server action and window action ? | - Server action  : will done by the python side, for example send mail with out any manual action it will execute automatically - Window action : will be handle in the xml view side, execute from the view side.
+7. If new enabled a new field in the class means, how the odoo will identify the new field was added ? | when the particular module get upgrade, in that odoo well identify that new fields has been added.
+8. We wanna customise the sale order partner id label as  as customer A in a separate custom module, then we create a another custom module as change same field label name as customer Name ? | Based on the module installation sequence.
+9. We wanna customise the sale order partner id label as  as customer A in using xpath in file 1 and same field label name change as customer Name in file 2 ? | It will reflect based on the manifest file sequence in the module.
+10. We wanna customise the sale order partner id label as  as customer A in using python in file 1 and same field label name change as customer Name in file 2 ? | : It will reflect based on the __init__.py file sequence in the module.
+11. Shallow Copy ? | : Copies the structure, not the elements within nested structures.
+12. Deep Copy ? |  Copies the structure and all elements, recursively.
+13.  different between @api.onchange and @.api.depends ? |  -  onchage with trigger while user manually change the fields value -  depends with trigger when the field get updating or creation or unlink
+14. In-build widgets ? | - float, text, Integer, many2many,  progress_bar, status_bar
+15. Different between sql constrains and python constrains. ? | -   sql constrains will be create in the DB -   python @api.constrain
+16. Tell me the scenario to use  sql constrain ? | -   To check the unique value with in the columns
+17. Give be the brief about MVC pattern ? | - Model View Controller
+18. what is record rules, explain with a real time example ? | - we can set a rule based on the record, example company based record view and financial year based records view
+19. what are the product types in odoo ? | - consumable, store able , service  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
