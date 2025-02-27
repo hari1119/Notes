@@ -2,6 +2,7 @@
 
 1. Different between Many2many and One2many fields
     - **M2M** : This creates a link table (or intermediate table) that contains foreign keys referencing the primary keys of both related tables, This allows for the association of multiple records from both sides.
+    - if we can able to define the table and coulum name within the fields declaretion itself, else system will automatically create, related module along with currecnt module name and with suffix as rel, Example in sale order line. we can able to see the tax_id fields in that m2m table name will be account_tax_sale_order_line_rel, and the table have column as sale_order_line_id and acccount_tax_id, this table is the relation between tha sale order line and account tax.
     - Imagine a scenario where you have a Product model and a Category model. A product can belong to multiple categories, and a category can include multiple products. This relationship is defined using Many2many
     - **O2M** : This creates a field in the source model that holds an array of IDs from the target model,It's essentially a list of references to the target model.
       
