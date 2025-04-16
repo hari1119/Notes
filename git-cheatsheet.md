@@ -72,10 +72,10 @@
    - we added “hello*.py” into our .gitignore file
      
 ## 3) GitHub Credential Manager
-     Using this we can skip the enter the password each time while pull and push, follow the below steps to config that.
-     step 1 : Download the .deb pkg from the internet.
+   Using this we can skip the enter the password each time while pull and push, follow the below steps to config that.
+   - step 1 : Download the .deb pkg from the internet.
          ``` wget https://github.com/GitCredentialManager/git-credential-manager/releases/download/v2.0.935/gcm-linux_amd64.2.0.935.deb ```
-     step 2 : Install that in the system:
+   - step 2 : Install that in the system:
          ``` sudo dpkg -i gcm-linux_amd64.2.0.935.deb ```
      while you doning the git action like git pull or git push one pop up will raise in that we can able to set the token for the future reference.
 
