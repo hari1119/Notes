@@ -266,6 +266,42 @@
 [Link](https://atsresume.vercel.app/)
 
 
+#### 24. Instead of Postman Pro → Use Hoppscotch
+
+###### Ref
+[Link](https://hoppscotch.io/)
+
+
+#### 25. Instead of Paid Icons → Use Lucide or Heroicons
+
+###### Ref
+[Lucide Link](https://lucide.dev/)
+[Heroicons Link](https://heroicons.com/)
+
+#### 26. Instead of Paid Icons → Use Lucide or Heroicons
+
+###### Ref
+[Lucide Link](https://languagetool.org/)
+
+
+#### 27. Instead of Paid Code Formatters → Use Prettier or Black
+
+###### Ref
+[Prettier Link](https://black.readthedocs.io/en/stable/)
+[Black Link](https://prettier.io/)
+
+#### 28. Instead of Paid Screenshot Tools → Use Ray.so and Carbon
+
+###### Ref
+[Ray.so Link](https://ray.so/)
+[Carbon Link](https://carbon.now.sh/)
+
+#### 29. To create a dummy API in the public server
+
+###### Ref
+[Beeceptor Link](https://beeceptor.com/)
+
+
 
 
 
