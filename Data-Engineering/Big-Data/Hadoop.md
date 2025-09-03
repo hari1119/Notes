@@ -163,8 +163,8 @@ NodeManager
 ```
 
 (check the Browser Web GUI )
-[NameNode](http://localhost:50070/) - http://localhost:50070/
-[Resource Manager](http://localhost:8088/)- http://localhost:8088/
+   - [NameNode](http://localhost:50070/) - http://localhost:50070/
+   - [Resource Manager](http://localhost:8088/)- http://localhost:8088/
 
 # Stop All Hadoop and Yarn Related Services
 
