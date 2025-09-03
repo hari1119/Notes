@@ -49,7 +49,7 @@
 
 
 
-### *Notes :* Add the below code in between the ```<configuration>``` tag
+### *Notes :* Add the below code in between the ```<configuration>``` tag or Copy the `etc/hadoop/core-site.xml.template` and rename.
 **File:** `etc/hadoop/core-site.xml`
 ```xml
 <property>
