@@ -28,16 +28,89 @@
   - [Hadoop Download](https://archive.apache.org/dist/hadoop/common/hadoop-2.9.2/) Click the link to download the hadoop, make sure it should be a ur system matching bits like 64bits, download the file ends with *.tar.gz composed one.  
   - [Java Download](https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html) Click the link to download java, make sure it should be a your system matching bits
   - After Downloaded more the files to the Home to start.
+  - ```tar -xvf filename.tar``` use this command to Extract the .tar file.
   - Open as terminal and open a ```.bashrc``` file
   - Move the courser to the end and add the env for the java and hadoop
   - ```
     export JAVA_HOME=/home/hari/jdk1.8.0_202
-    export HADOOP_HOME=/home/hari/
+    export HADOOP_HOME=/home/hari/hadoop-2.9.2
 
     export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$PATH
     ```
   - Run the ```.bashrc``` file using the ```source .bashrc``` command
   - After running the above command, Check the Java version using ```java -version```
-  - 
 
+# Modify Hadoop Configuration Files
+  - NAMENODE ----> core-site.xml
+  - RESOURCE MANGER ----> mapperd-site.xml
+  - SECONDARYNAMENODE ---->
+  - DATANODE ----> slaves
+  - NODEMANGER ----> slaves & yarn-site.xml
+
+**File:** `etc/hadoop/core-site.xml`
+```xml
+<property>
+<name>fs.default.name</name>
+<value>hdfs://localhost:50000</value>
+</property>
+```
+
+**File:** `etc/hadoop/yarn-site.xml`
+```xml
+<property>
+<name>yarn.nodemanager.aux-services</name> <value>mapreduce_shuffle</value>
+</property>
+<property>
+<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name> <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+<property>
+<description>The hostname of the RM.</description>
+<name>yarn.resourcemanager.hostname</name>
+<value>localhost</value>
+</property>
+<property>
+<description>The address of the applications manager interface in the RM.</description>
+<name>yarn.resourcemanager.address</name>
+<value>{yarn.resourcemanager.hostname}:8032</value>
+</property>
+```
+**File:** `etc/hadoop/hdfs-site.xml`
+```xml
+<property>
+<name>dfs.namenode.name.dir</name>
+<value>/home/username/hadoop2-dir/namenode-dir</value>
+</property>
+<property>
+<name>dfs.datanode.data.dir</name>
+<value>/home/username/hadoop2-dir/datanode-dir</value>
+</property>
+```
+
+   - ```mapred-site.xml``` want to create the file manually.
+**File:** `etc/hadoop/mapred-site.xml`
+```xml
+<property>
+<name>mapreduce.framework.name</name>
+<value>yarn</value>
+</property>
+```
+
+**File:** `etc/hadoop/hadoop-env.sh`
+```sh
+export JAVA_HOME=/home/username/jdk1.8.0_45
+```
+
+**File:** `etc/hadoop/mapred-env.sh`
+```sh
+export JAVA_HOME=/home/username/jdk1.8.0_ 45
+```
+
+**File:** `etc/hadoop/yarn-env.sh`
+```sh
+export JAVA_HOME=/home/username/jdk1.8.0_45
+```
+**File:** `etc/hadoop/slaves`
+```
+localhost
+```
 
