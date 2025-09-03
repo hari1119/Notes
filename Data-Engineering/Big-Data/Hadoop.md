@@ -157,6 +157,12 @@ Storage directory /tmp/hadoop-aspireal/dfs/name has been successfully formatted.
 ```
 (Starting Daemon’s For DFS & YARN)
 
+- To list all the nodes
+
+```sh
+jps
+```
+
 ```sh
 NameNode
 DataNode
