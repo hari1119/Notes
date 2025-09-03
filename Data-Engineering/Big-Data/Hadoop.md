@@ -47,6 +47,9 @@
   - DATANODE ----> slaves
   - NODEMANGER ----> slaves & yarn-site.xml
 
+
+
+### *Notes :* Add the below code in between the ```<configuration>``` tag
 **File:** `etc/hadoop/core-site.xml`
 ```xml
 <property>
