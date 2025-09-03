@@ -113,4 +113,24 @@ export JAVA_HOME=/home/username/jdk1.8.0_45
 ```
 localhost
 ```
+# Install SSH-Server
+```sh
+sudo apt-get install openssh-server
+```
+# Install the ssh key
+(Generates, Manages and Converts Authentication keys)
+```sh
+ ssh-keygen -t rsa
+```
+(Setup passwordless ssh to localhost and to slaves )
+```sh
+ cd .ssh
+ ls
+ cat id_rsa.pub >> authorized_keys (copy the .pub)
+```
+(Copy the id_rsa.pub from NameNode to authorized_keys in all machines)
+```sh
+ssh localhost
+```
+(Asking No Password )
 
