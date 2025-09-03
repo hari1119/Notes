@@ -142,3 +142,32 @@ ssh localhost
  bin/hadoop namenode -format
 ```
  (Your Hadoop File System Ready)
+ ```log
+Storage directory /tmp/hadoop-aspireal/dfs/name has been successfully formatted.
+```
+- If we seen the above log means everything installed fine.
+
+# Start All Hadoop Related Services
+
+```sh
+ sbin/start-all.sh
+```
+(Starting Daemon’s For DFS & YARN)
+
+```sh
+NameNode
+DataNode
+SecondaryNameNode
+ResourceManager
+NodeManager
+```
+
+(check the Browser Web GUI )
+[NameNode](http://localhost:50070/) - http://localhost:50070/
+[Resource Manager](http://localhost:8088/)- http://localhost:8088/
+
+# Stop All Hadoop and Yarn Related Services
+
+```sh
+ sbin/stop-all.sh
+```
