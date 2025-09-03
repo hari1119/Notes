@@ -19,6 +19,6 @@
  - we can do the data science related stuffes and the ML & AI in the mahout
 
 ## Flume
- - Stream the data from the multiple resouces.
+ - Stream the data retrieving from the multiple resouces, only fetch not loading like a Sqoop
 
 
