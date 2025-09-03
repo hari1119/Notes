@@ -27,6 +27,17 @@
   - ``` uname -a ``` to find the system bites, like 64 or 32
   - [Hadoop Download](https://archive.apache.org/dist/hadoop/common/hadoop-2.9.2/) Click the link to download the hadoop, make sure it should be a ur system matching bits like 64bits, download the file ends with *.tar.gz composed one.  
   - [Java Download](https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html) Click the link to download java, make sure it should be a your system matching bits
+  - After Downloaded more the files to the Home to start.
+  - Open as terminal and open a ```.bashrc``` file
+  - Move the courser to the end and add the env for the java and hadoop
+  - ```
+    export JAVA_HOME=/home/hari/jdk1.8.0_202
+    export HADOOP_HOME=/home/hari/
 
+    export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$PATH
+    ```
+  - Run the ```.bashrc``` file using the ```source .bashrc``` command
+  - After running the above command, Check the Java version using ```java -version```
+  - 
 
 
