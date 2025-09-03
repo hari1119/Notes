@@ -134,3 +134,11 @@ ssh localhost
 ```
 (Asking No Password )
 
+# Format NameNode
+```sh
+ cd hadoop-2.9.1
+```
+```sh
+ bin/hadoop namenode -format
+```
+ (Your Hadoop File System Ready)
