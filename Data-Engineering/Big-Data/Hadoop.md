@@ -21,4 +21,12 @@
 ## Flume
  - Stream the data retrieving from the multiple resouces, only fetch not loading like a Sqoop
 
+# Hadoop Instalations
+
+  - Make sure the ubuntu OS is installed
+  - ``` uname -a ``` to find the system bites, like 64 or 32
+  - [Hadoop Download](https://archive.apache.org/dist/hadoop/common/hadoop-2.9.2/) Click the link to download the hadoop, make sure it should be a ur system matching bits like 64bits, download the file ends with *.tar.gz composed one.  
+  - [Java Download](https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html) Click the link to download java, make sure it should be a your system matching bits
+
+
 
