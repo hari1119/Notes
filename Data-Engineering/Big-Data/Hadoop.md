@@ -180,3 +180,17 @@ NodeManager
 ```sh
  sbin/stop-all.sh
 ```
+
+# Hadoop List Command
+
+```sh
+bin/hadoop dfs -ls /
+```
+# Hadoop Folder Cretion command
+
+```sh
+bin/hadoop dfs -mkdir /hari-data
+```
+
+
+
