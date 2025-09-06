@@ -69,3 +69,5 @@
     ```
     - create a databse as ```metastore```
     - After the db created go to the hive folder and type ```bin/schematool -dbType postgres -initSchema``` run this cmd to create a hive schema, in-case of mysql replace the postgres and try with mysql
+    - type ```bin/hive``` hive shell will open in the terminal
+    - ``` show databases;``` list on db in the hive, at the starting we can see the default db
