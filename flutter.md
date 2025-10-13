@@ -172,8 +172,28 @@ class MyApp extends StatelessWidget {
     }
   }
   ```
-  - 
+- ```Image()``` is a widget to show the images in the screen, from the ```asset``` (flutter asset), ```network``` (from the internet), ```memory```(from the system memory), ```file```(from the file).
+- ```main.dart
+  import 'package:flutter/material.dart';
 
+  void main() => runApp(MyApp());
+  
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+              child: Image.network(
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOO2q_l5g6ODZJLrjKqBy22kTejhANjhLAEw&s")),
+        ),
+      );
+    }
+  }
+  ```
+- 
 
 
   
