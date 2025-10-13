@@ -10,7 +10,7 @@ Use the Online Fluter Development IDE : [FlutLab.io](https://flutlab.io/)
 - ```void main() => runApp(MyApp());``` void main() is a function, runApp is a widget, MyApp() is a class.
 - ```StatelessWidget``` is a one more widget
 - Basic code with white screen
-- ```
+- ```main.dart
   import 'package:flutter/material.dart';
 
   void main() => runApp(MyApp());
@@ -59,5 +59,98 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+## importent widget
+- ```StatelessWidget``` this is used to create a class for a flutter app, just type ```Stless``` choose the 4th suggestion to get the full stucture.
+- ``` main.dart
+  import 'package:flutter/material.dart';
 
+  void main() => runApp(MyApp());
+  
+  class Stless extends StatelessWidget {
+    const Stless({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+        
+      );
+    }
+  }
+  ```
+- ```MaterialApp()``` is a widget to use the all the avaiable material in the flutter, like ```home``` attribute and so on.
+- ```main.dart
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(MyApp());
+  
+  class Stless extends StatelessWidget {
+    const Stless({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        
+      );
+    }
+  }
+  ```
+- ```Scaffold()``` is the base widget to start develop the sceen with the white screen and attributes like ```body```, same like this we can use ```Container()``` with a black screen
+- ```main.dart
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(MyApp());
+  
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(),
+      );
+    }
+  }
+  ```
+- ```Icon()``` used to display the icon with the attributes
+- ```main.dart
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(MyApp());
+  
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          body: Icon(Icons.alarm, size: 40, color: Colors.yellow),
+        ),
+      );
+    }
+  }
+  ```
+- ```Center()``` used to display the content in the center screen
+- ``` main.dart
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(MyApp());
+  
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          body: Center(child: Icon(Icons.alarm, size: 80, color: Colors.yellow)),
+        ),
+      );
+    }
+  }
+  ```
+
+
+  
+
+  
+
+  
+
+  
 
