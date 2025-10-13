@@ -229,7 +229,33 @@ class MyApp extends StatelessWidget {
   }
 
   ```
-- Net
+- ```CircleAvatar()``` used to create a profile pic, like what's app
+- ```main.dart
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(MyApp());
+  
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+          home: Scaffold(
+        body: Center(
+          child: CircleAvatar(
+            backgroundColor: Colors.black,
+            radius: 50,
+            backgroundImage: NetworkImage(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-fHmKlKiDhirNAwa21TDkjjv1t1cwXv_BlA&s"),
+          ),
+        ),
+      ));
+    }
+  }
+  ```
+- net
+
+  
 
 
   
