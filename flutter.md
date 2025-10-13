@@ -196,7 +196,7 @@ class MyApp extends StatelessWidget {
 - ```Container()``` is like a div in the HTML tag
 - ``` main.dart
   import 'package:flutter/material.dart';
-
+  
   void main() => runApp(MyApp());
   
   class MyApp extends StatelessWidget {
@@ -215,12 +215,19 @@ class MyApp extends StatelessWidget {
                 image: DecorationImage(
                     image: NetworkImage(
                         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrIlPDc9BFXePXVeewu7j3T0mbKU6V4bXlA&s"),
-                    fit: BoxFit.cover)),
+                    fit: BoxFit.cover),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color(0xff080808),
+                      offset: Offset(4.5, 2.5),
+                      blurRadius: 6.0),
+                ]),
           ),
         ),
       ));
     }
   }
+
   ```
 - Net
 
