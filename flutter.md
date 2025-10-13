@@ -24,4 +24,8 @@ Use the Online Fluter Development IDE : [FlutLab.io](https://flutlab.io/)
       );
     }
   }
-```
+  ```
+<img width="278" height="497" alt="image" src="https://github.com/user-attachments/assets/75dac59d-cb66-4403-828a-5df3e129ba76" />
+- ```debugShowCheckedModeBanner: false``` use this to remove the debug in the screen like above inside the ```MaterialApp()``` widget
+
+
