@@ -26,6 +26,38 @@ Use the Online Fluter Development IDE : [FlutLab.io](https://flutlab.io/)
   }
   ```
 <img width="278" height="497" alt="image" src="https://github.com/user-attachments/assets/75dac59d-cb66-4403-828a-5df3e129ba76" />
-- ```debugShowCheckedModeBanner: false``` use this to remove the debug in the screen like above inside the ```MaterialApp()``` widget
+
+
+- ```debugShowCheckedModeBanner: false``` use this to remove the debug in the screen like above inside the ```MaterialApp()``` widget.
+- Type ```Stless``` and choose the StatelessWidget we will have the full class syntax
+- Chanege the Stless into ur class name, like MyApp
+- Inside the scaffold we have the body attribute use that
+- ```Center()``` widget to place the content in the center part of the screen, ```child``` is a attribute in the center that means chile of the center widget.
+- ```Text()``` widget is used to display the Text with the style and font change, like ```fontSize```, ```fontWeight```, ```color``` and ```fontStyle```
+
+```main.dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+            child: Text("Hello Mr. Hari",
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                    fontStyle: FontStyle.italic))),
+      ),
+    );
+  }
+}
+```
 
 
