@@ -61,6 +61,7 @@ class MyApp extends StatelessWidget {
 ```
 ## importent widget
 
+- Widgets is nothing as like a fields in the HTML, like Text, button, icon ..
 - ```StatelessWidget``` this is used to create a class for a flutter app, just type ```Stless``` choose the 4th suggestion to get the full stucture.
 - ``` main.dart
   import 'package:flutter/material.dart';
