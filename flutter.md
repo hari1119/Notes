@@ -60,6 +60,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 ## importent widget
+
 - ```StatelessWidget``` this is used to create a class for a flutter app, just type ```Stless``` choose the 4th suggestion to get the full stucture.
 - ``` main.dart
   import 'package:flutter/material.dart';
@@ -144,6 +145,34 @@ class MyApp extends StatelessWidget {
     }
   }
   ```
+- ```Text()``` is used to sceen the text with the attributes.
+- ```main.dart
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(MyApp());
+  
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+              child: Text("Welcome to the flutter framework development by Hari",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                      fontStyle: FontStyle.italic))),
+        ),
+      );
+    }
+  }
+  ```
+  - 
+
 
 
   
