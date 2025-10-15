@@ -10,6 +10,8 @@ Use the Online Fluter Development IDE : [FlutLab.io](https://flutlab.io/)
 - ```void main() => runApp(MyApp());``` void main() is a function, runApp is a widget, MyApp() is a class.
 - ```StatelessWidget``` is a one more widget
 - Basic code with white screen
+- <img width="256" height="452" alt="image" src="https://github.com/user-attachments/assets/c7cfe3ea-8947-4e0f-8d88-c76cff45bbdc" />
+
 - ```main.dart
   import 'package:flutter/material.dart';
 
@@ -25,8 +27,7 @@ Use the Online Fluter Development IDE : [FlutLab.io](https://flutlab.io/)
     }
   }
   ```
-<img width="278" height="497" alt="image" src="https://github.com/user-attachments/assets/75dac59d-cb66-4403-828a-5df3e129ba76" />
-
+- <img width="253" height="448" alt="image" src="https://github.com/user-attachments/assets/5bdaf76f-e26e-4443-b0f5-4738eae06045" />
 
 - ```debugShowCheckedModeBanner: false``` use this to remove the debug in the screen like above inside the ```MaterialApp()``` widget.
 - Type ```Stless``` and choose the StatelessWidget we will have the full class syntax
@@ -34,6 +35,7 @@ Use the Online Fluter Development IDE : [FlutLab.io](https://flutlab.io/)
 - Inside the scaffold we have the body attribute use that
 - ```Center()``` widget to place the content in the center part of the screen, ```child``` is a attribute in the center that means chile of the center widget.
 - ```Text()``` widget is used to display the Text with the style and font change, like ```fontSize```, ```fontWeight```, ```color``` and ```fontStyle```
+- <img width="253" height="454" alt="image" src="https://github.com/user-attachments/assets/98146bca-02a7-4ab4-a9e4-6f867d6410d3" />
 
 ```main.dart
 import 'package:flutter/material.dart';
@@ -111,6 +113,8 @@ class MyApp extends StatelessWidget {
   }
   ```
 - ```Icon()``` used to display the icon with the attributes
+- <img width="259" height="454" alt="image" src="https://github.com/user-attachments/assets/dbed08b4-7bc7-4414-a988-495060c334d0" />
+
 - ```main.dart
   import 'package:flutter/material.dart';
 
@@ -129,6 +133,8 @@ class MyApp extends StatelessWidget {
   }
   ```
 - ```Center()``` used to display the content in the center screen
+- <img width="260" height="450" alt="image" src="https://github.com/user-attachments/assets/fee0e95f-678c-4435-a16c-d753ca165714" />
+
 - ``` main.dart
   import 'package:flutter/material.dart';
 
@@ -147,6 +153,8 @@ class MyApp extends StatelessWidget {
   }
   ```
 - ```Text()``` is used to sceen the text with the attributes.
+- <img width="251" height="451" alt="image" src="https://github.com/user-attachments/assets/bb4bd410-992d-4d10-968f-4c4521239c1f" />
+
 - ```main.dart
   import 'package:flutter/material.dart';
 
@@ -173,6 +181,8 @@ class MyApp extends StatelessWidget {
   }
   ```
 - ```Image()``` is a widget to show the images in the screen, from the ```asset``` (flutter asset), ```network``` (from the internet), ```memory```(from the system memory), ```file```(from the file).
+- <img width="257" height="446" alt="image" src="https://github.com/user-attachments/assets/6eab803d-7c48-4c54-9a99-1c50290f6e56" />
+
 - ```main.dart
   import 'package:flutter/material.dart';
 
@@ -194,6 +204,8 @@ class MyApp extends StatelessWidget {
   }
   ```
 - ```Container()``` is like a div in the HTML tag
+- <img width="258" height="452" alt="image" src="https://github.com/user-attachments/assets/a77bb684-b6c5-44cf-b348-908ce408d988" />
+
 - ``` main.dart
   import 'package:flutter/material.dart';
   
